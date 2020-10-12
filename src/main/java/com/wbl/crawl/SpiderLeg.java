@@ -61,7 +61,7 @@ public class SpiderLeg {
                 this.links.add(link.absUrl("href"));
             }
             return true;
-        } catch (IOException ioe) {
+        } catch (IOException | IllegalArgumentException ioe) {
             // We were not successful in our HTTP request
             return false;
         }
